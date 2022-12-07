@@ -8,8 +8,8 @@ class Player {
 
     public:
     Player(const char* name = "", int maxHP = 100, int force = 5);
-    Player(const Player&) = default;
-    ~Player();
+    ~Player() = default;
+    Player& operator=(const Player& other) = default;
     void printInfo() const;
     void levelUp();
     int getLevel() const;

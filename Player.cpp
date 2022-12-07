@@ -11,10 +11,6 @@ Player::Player(const char* name = "", int maxHP = 100, int force = 5) {
     m_coins = 0;
 }
 
-Player::~Player(){
-
-}
-
 void Player::printInfo() const {
     printPlayerInfo(m_name, m_level, m_force, m_hp, m_coins);
 }
