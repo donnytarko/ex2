@@ -52,7 +52,7 @@ void Player::damage(int damageTaken) {
     }
 }
 
-bool Player::isKnockedOut(int damageTaken) const {
+bool Player::isKnockedOut() const {
     return m_hp == 0;
 }
 

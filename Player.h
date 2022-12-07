@@ -7,7 +7,8 @@ class Player {
     int m_level, m_force, m_maxHP, m_hp, m_coins;
 
     public:
-    Player(const char* name, int maxHP = 100, int force = 5);
+    Player(const char* name = "", int maxHP = 100, int force = 5);
+    Player(const Player&) = default;
     ~Player();
     void printInfo() const;
     void levelUp();
