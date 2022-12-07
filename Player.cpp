@@ -7,7 +7,7 @@ Player::Player(const char* name, int maxHP, int force) {
     m_maxHP = maxHP;
     m_hp = maxHP;
     m_force = force;
-    m_level = 0;
+    m_level = 1;
     m_coins = 0;
 }
 
