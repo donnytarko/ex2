@@ -61,7 +61,9 @@ public:
 
 private:
     //TODO: complete the Mtmchkin class.
-
+    Card* m_cards;
+    Player m_player;
+    GameStatus m_gameStatus;
 };
 
 
