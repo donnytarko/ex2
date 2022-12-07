@@ -2,6 +2,9 @@
 
 Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards) {
     m_cards = new Card[numOfCards];
+    for (int card = 0; card < numOfCards; card++) {
+        m_cards[card] = cardsArray[card];
+    }
     m_gameStatus = GameStatus::MidGame;
     m_player = Player(playerName);
     m_numOfCards = numOfCards;
@@ -9,7 +12,6 @@ Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCard
 }
 
 void Mtmchkin::playNextCard() {
-    std::cout << "currnet card is " << m_currentCard << std::endl;
     m_cards[m_currentCard].printInfo();
     m_cards[m_currentCard].applyEncounter(m_player);
     m_player.printInfo();
@@ -18,7 +20,6 @@ void Mtmchkin::playNextCard() {
     }
     else {
         m_currentCard++;
-        std::cout << "movin on now" << std::endl;
     }
 }
 
