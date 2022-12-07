@@ -9,6 +9,10 @@ Card::Card(CardType type, const CardStats& stats) {
 }
 
 void Card::applyEncounter(Player& player) const {
+
+    std::cout << "now we up in here boiii" << std::endl;
+
+
     if (m_effect == CardType::Battle) {
         if (player.getAttackStrength() >= m_stats.force) {
             player.levelUp();
@@ -40,8 +44,11 @@ void Card::applyEncounter(Player& player) const {
 
 void Card::printInfo() const {
 
-    std::cout << "stats is " << m_stats << std::endl;
-    std::cout << "effect is" << m_effect << std::endl;
+    std::cout << "buff is " << m_stats.buff << std::endl;
+    std::cout << "cost is " << m_stats.cost << std::endl;
+    std::cout << "loot is " << m_stats.loot << std::endl;
+
+    std::cout << "effect is" << (m_effect == CardType::Treasure) <<std::endl;
 
 
     if (m_effect == CardType::Battle) {
