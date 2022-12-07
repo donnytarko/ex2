@@ -28,7 +28,7 @@ public:
      *      An instance of Mtmchkin
     */
     Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards);
-    ~Mtmchkin() = default;
+    ~Mtmchkin();
     Mtmchkin& operator=(const Mtmchkin& other) = default;
 
 
