@@ -29,7 +29,7 @@ void Card::applyEncounter(Player& player) const {
 
     if (m_effect == CardType::Heal) {
         if (player.pay(m_stats.cost)) {
-            player.buff(m_stats.heal);
+            player.heal(m_stats.heal);
         }
     }
 
