@@ -39,6 +39,11 @@ void Card::applyEncounter(Player& player) const {
 }
 
 void Card::printInfo() const {
+
+    std::cout << "stats is " << m_stats << std::endl;
+    std::cout << "effect is" << m_effect << std::endl;
+
+
     if (m_effect == CardType::Battle) {
         printBattleCardInfo(m_stats);
     }
