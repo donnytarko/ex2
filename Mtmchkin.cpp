@@ -9,15 +9,15 @@ Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCard
 }
 
 void Mtmchkin::playNextCard() {
+    m_cards[m_currentCard].printInfo();
+    m_cards[m_currentCard].applyEncounter(m_player);
+    m_player.printInfo();
     if (m_currentCard == m_numOfCards - 1) {
         m_currentCard = 0;
     }
     else {
         m_currentCard++;
     }
-    m_cards[m_currentCard].printInfo();
-    m_cards[m_currentCard].applyEncounter(m_player);
-    m_player.printInfo();
 }
 
 GameStatus Mtmchkin::getGameStatus() const{
