@@ -2,7 +2,7 @@
 #include "Player.h"
 #include "utilities.h"
 
-Player::Player(const char* name, int maxHP = 100, int force = 5) {
+Player::Player(const char* name = "", int maxHP = 100, int force = 5) {
     m_name = name;
     m_maxHP = maxHP;
     m_hp = maxHP;

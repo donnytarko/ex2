@@ -8,10 +8,6 @@ Card::Card(CardType type, const CardStats& stats) {
     m_stats = stats;
 }
 
-Card::~Card() {
-
-}
-
 void Card::applyEncounter(Player& player) const {
     if (m_effect == CardType::Battle) {
         if (player.getAttackStrength() >= m_stats.force) {

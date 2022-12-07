@@ -8,10 +8,6 @@ Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCard
     m_currentCard = 0;
 }
 
-Mtmchkin::~Mtmchkin() {
-    delete[] m_cards;
-}
-
 void Mtmchkin::playNextCard() {
     if (m_currentCard == m_numOfCards - 1) {
         m_currentCard = 0;
