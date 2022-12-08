@@ -26,8 +26,9 @@ Mtmchkin& Mtmchkin::operator=(const Mtmchkin& other){
     }
     m_gameStatus = other.m_gameStatus;
     m_player = other.m_player;
-    m_numOfCards = m_numOfCards;
-    m_currentCard = m_currentCard;
+    m_numOfCards = other.m_numOfCards;
+    m_currentCard = other.m_currentCard;
+    return *this;
 }
 
 
