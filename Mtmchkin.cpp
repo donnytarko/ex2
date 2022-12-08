@@ -15,6 +15,22 @@ Mtmchkin::~Mtmchkin() {
     delete[] m_cards;
 }
 
+Mtmchkin& Mtmchkin::operator=(const Mtmchkin& other){
+    if (&other == this) {
+        return *this;
+    }
+    delete[] m_cards;
+    m_cards = new Card[other.m_numOfCards];
+    for (int card = 0; card < other.m_numOfCards; card++) {
+        m_cards[card] = other.m_cards[card];
+    }
+    m_gameStatus = other.m_gameStatus;
+    m_player = other.m_player;
+    m_numOfCards = m_numOfCards;
+    m_currentCard = m_currentCard;
+}
+
+
 void Mtmchkin::playNextCard() {
     m_cards[m_currentCard].printInfo();
     m_cards[m_currentCard].applyEncounter(m_player);

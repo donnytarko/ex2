@@ -29,7 +29,7 @@ public:
     */
     Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards);
     ~Mtmchkin();
-    Mtmchkin& operator=(const Mtmchkin& other) = default;
+    Mtmchkin& operator=(const Mtmchkin& other);
 
 
     /*
